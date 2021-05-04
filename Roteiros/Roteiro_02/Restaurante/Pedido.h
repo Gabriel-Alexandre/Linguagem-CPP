@@ -13,6 +13,7 @@ class Pedido {
         int getQuantidade();
         float getPreco();
         void setQuantidade(int q);
+        float getTotal();
 
     private:
         int numero, quantidade;

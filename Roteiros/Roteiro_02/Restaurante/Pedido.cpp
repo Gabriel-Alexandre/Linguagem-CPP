@@ -8,7 +8,6 @@ Pedido::Pedido() {
     numero = 0;
     quantidade = 0;
     preco = 0;
-
 }
 
 Pedido::Pedido(int n, string d, int q, float p) {
@@ -32,6 +31,10 @@ int Pedido::getQuantidade() {
 
 float Pedido::getPreco() {
     return preco;
+}
+
+float Pedido::getTotal() {
+    return quantidade * preco;
 }
 
 void Pedido::setQuantidade(int q) {
