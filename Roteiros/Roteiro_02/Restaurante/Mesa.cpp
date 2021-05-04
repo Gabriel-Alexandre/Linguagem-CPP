@@ -19,9 +19,9 @@ void Mesa::adicionarPedido(Pedido p) {
     pedidos.push_back(p);
 }
 
-/*Pedido Mesa::getPedidoMesa(int i) {
+Pedido Mesa::getPedidoMesa(int i) {
     return pedidos[i];
-}*/
+}
 
 void Mesa::zerarPedidos() {
     for (int i = 0; i < pedidos.size(); i++) {

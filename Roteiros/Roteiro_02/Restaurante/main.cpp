@@ -31,9 +31,12 @@ int main () {
 
 
     //Falta só organizar a exibição dos dados
+    //Dica: Refazer essa questão toda com minha lógica. (Assim vou aprender melhor).
     for (int i = 0; i < 100; i++) {
-        cout << "Mesa " << i << endl;
-        r1.exibeConta();
+        if(r1.getMesa(i).getPedidoMesa(i).getNumero() != 0) {
+            cout << "Mesa " << i << endl;
+            r1.exibeContaGeral(i);
+        }
     }
     cout << "Restaurante: R$ " << r1.calculaTotalRestaurante();
 }

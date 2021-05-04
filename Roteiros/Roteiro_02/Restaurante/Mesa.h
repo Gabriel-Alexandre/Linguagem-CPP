@@ -13,7 +13,7 @@ class Mesa {
         void zerarPedidos();
         float calculaTotal();
         void exibeConta();
-        /*Pedido getPedidoMesa(int i);*/
+        Pedido getPedidoMesa(int i);
 
     private:
         vector <Pedido> pedidos;

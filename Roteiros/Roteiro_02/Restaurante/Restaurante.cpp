@@ -25,6 +25,6 @@ Mesa Restaurante::getMesa(int i) {
     return mesas[i];
 }
 
-void Restaurante::exibeConta() {
-    exibeConta();
+void Restaurante::exibeContaGeral(int i) {
+    mesas[i].exibeConta();
 }

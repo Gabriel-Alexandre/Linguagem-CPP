@@ -12,7 +12,7 @@ class Restaurante {
         void adicionarPedido(Pedido p, int i);
         float calculaTotalRestaurante();
         Mesa getMesa(int i);
-        void exibeConta();
+        void exibeContaGeral(int i);
 
     private:
         Mesa mesas[100];
