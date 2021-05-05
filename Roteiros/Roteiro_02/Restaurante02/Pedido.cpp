@@ -10,19 +10,8 @@ Pedido::Pedido() {
     preco = 0;
 }
 
-Pedido::Pedido(int n, string d, int q, float p) {
-    numero = n;
-    descricao = d;
-    quantidade = q;
-    preco = p;
-}
-
 int Pedido::getNumero() {
     return numero;
-}
-
-string Pedido::getDescricao() {
-    return descricao;
 }
 
 int Pedido::getQuantidade() {
@@ -33,11 +22,27 @@ float Pedido::getPreco() {
     return preco;
 }
 
+string Pedido::getDescricao() {
+    return descricao;
+}
+
 float Pedido::getTotal() {
     return quantidade * preco;
 }
 
+void Pedido::setNumero(int n) {
+    numero = n;
+}
+
 void Pedido::setQuantidade(int q) {
     quantidade += q;
+}
+
+ void Pedido::setPreco(float p) {
+     preco = p;
+ }
+
+void Pedido::setDescricao(string d) {
+    descricao = d;
 }
 

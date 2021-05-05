@@ -13,30 +13,36 @@ int main () {
     Mesa m1;
     Restaurante r1;
 
-    do {
+    while(true) {
         cin >> numero;
         getchar();
         getline(cin, descricao);
         cin >> quantidade;
         cin >> preco;
         cin >> numMesa;
+        getchar();
 
         if (numMesa < 0) {
             break;
         }
 
-        p1 = Pedido(numero, descricao, quantidade, preco);
+        p1.setNumero(numero);
+        p1.setDescricao(descricao);
+        p1.setQuantidade(quantidade);
+        p1.setPreco(preco);
         r1.adicionarPedido(p1, numMesa);
-    } while (numMesa > 0);
+    }
 
 
-    //Falta só organizar a exibição dos dados
-    //Dica: Refazer essa questão toda com minha lógica. (Assim vou aprender melhor).
     for (int i = 0; i < 100; i++) {
-        if(r1.getMesa(i).getPedidoMesa(i).getNumero() != 0) {
+        if(r1.getMesa(i).calculaTotal() != 0) {
             cout << "Mesa " << i << endl;
             r1.exibeContaGeral(i);
         }
     }
     cout << "Restaurante: R$ " << r1.calculaTotalRestaurante();
+
+    //Falta só resolver o problemas de run-time no lop.
+
+    return 0;
 }

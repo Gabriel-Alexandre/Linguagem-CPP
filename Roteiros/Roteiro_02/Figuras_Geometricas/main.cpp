@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//Tentar fazer questão. (Qualquer coisa usar a gravação da aula como referência).
+
 int main() {
     int tipo;
     FiguraGeometrica *fig;
