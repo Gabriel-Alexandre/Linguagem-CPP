@@ -16,15 +16,16 @@ int main () {
     while(true) {
         cin >> numero;
         getchar();
+
+        if (numero < 0) {
+            break;
+        }
+
         getline(cin, descricao);
         cin >> quantidade;
         cin >> preco;
         cin >> numMesa;
         getchar();
-
-        if (numMesa < 0) {
-            break;
-        }
 
         p1.setNumero(numero);
         p1.setDescricao(descricao);
@@ -42,7 +43,7 @@ int main () {
     }
     cout << "Restaurante: R$ " << r1.calculaTotalRestaurante();
 
-    //Falta só resolver o problemas de run-time no lop.
+    //Falta só resolver o problema de soma da quantidade.
 
     return 0;
 }
