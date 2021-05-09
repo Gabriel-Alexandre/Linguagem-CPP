@@ -25,7 +25,6 @@ int main () {
         cin >> quantidade;
         cin >> preco;
         cin >> numMesa;
-        getchar();
 
         p1.setNumero(numero);
         p1.setDescricao(descricao);
@@ -43,7 +42,7 @@ int main () {
     }
     cout << "Restaurante: R$ " << r1.calculaTotalRestaurante();
 
-    //Falta só resolver o problema de soma da quantidade.
+    //Tomar muito cuidado com o uso de uma função para mais de duas funções.
 
     return 0;
 }

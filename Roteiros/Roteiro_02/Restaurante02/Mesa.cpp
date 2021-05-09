@@ -10,8 +10,10 @@ Mesa::Mesa() {
 
 void Mesa::adicionarPedido(Pedido p) {
     for(int i = 0; i < pedidos.size(); i++) {
+        cout << "Vetor: " << pedidos[i].getQuantidade() << endl;
+        cout << "Digitado: " << p.getQuantidade() << endl;
         if(pedidos[i].getNumero() == p.getNumero()) {
-            pedidos[i].setQuantidade(p.getQuantidade());
+            pedidos[i].incrementar(p.getQuantidade());
             return;
         }
     }

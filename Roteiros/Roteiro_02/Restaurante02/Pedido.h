@@ -16,6 +16,7 @@ class Pedido {
         void setQuantidade(int q);
         void setPreco(float p);
         void setDescricao(string d);
+        void incrementar(int qtd);
 
     private:
         int numero, quantidade;

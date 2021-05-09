@@ -35,7 +35,7 @@ void Pedido::setNumero(int n) {
 }
 
 void Pedido::setQuantidade(int q) {
-    quantidade += q;
+    quantidade = q;
 }
 
  void Pedido::setPreco(float p) {
@@ -44,5 +44,9 @@ void Pedido::setQuantidade(int q) {
 
 void Pedido::setDescricao(string d) {
     descricao = d;
+}
+
+void Pedido::incrementar(int qtd) {
+    quantidade += qtd;
 }
 
