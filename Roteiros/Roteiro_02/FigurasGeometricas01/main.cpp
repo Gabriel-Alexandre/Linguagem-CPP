@@ -41,7 +41,5 @@ int main () {
         default:
             break;
         }
-
-
     }
 }
