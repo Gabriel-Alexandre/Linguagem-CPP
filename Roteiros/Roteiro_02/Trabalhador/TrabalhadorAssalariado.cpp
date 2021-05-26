@@ -1,15 +1,8 @@
 #include "TrabalhadorAssalariado.hpp"  
 
-TrabalhadorAssalariado::TrabalhadorAssalariado() {
-	
-}
-
-void TrabalhadorAssalariado::setSalario(float salario) {
-    this->salario = salario;
-}
-
-float TrabalhadorAssalariado::getSalario() {
-    return salario;
+TrabalhadorAssalariado::TrabalhadorAssalariado(std::string nome, float salario) {
+	this->salario = salario;
+    this->nome = nome;
 }
 
 float TrabalhadorAssalariado::calcularPagamentoSemanal() {

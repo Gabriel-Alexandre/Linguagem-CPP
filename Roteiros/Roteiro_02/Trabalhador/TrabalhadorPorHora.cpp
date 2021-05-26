@@ -1,25 +1,20 @@
 #include "TrabalhadorPorHora.hpp"
-#include <iostream>
 
-using namespace std;
-
-TrabalhadorPorHora::TrabalhadorPorHora() {
-}
-
-void TrabalhadorPorHora::setSalario(float valorHora) {
+TrabalhadorPorHora::TrabalhadorPorHora(std::string nome, float valorHora) {
     this->valorHora = valorHora;
-}
-
-float TrabalhadorPorHora::getSalario() {
-    return salario;
+    this->nome = nome;
 }
 
 float TrabalhadorPorHora::calcularPagamentoSemanal(int horasSemanais) {
+    float pagSemanal;
 
-    this->pagSemanal = horasSemanais * valorHora;
-    this->salario = pagSemanal * 4;
+    if (horasSemanais <= 40) {
+        pagSemanal = horasSemanais * valorHora;
+    }else{
+        pagSemanal = 40 * horasSemanais + (horasSemanais - 40) * valorHora * 1.5;
+    }
 
-    cout << "S: " << salario << " P: " << pagSemanal << endl;
+    salario = pagSemanal * 4;
 
-    return this->pagSemanal;
+    return pagSemanal;
 }

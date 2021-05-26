@@ -5,12 +5,9 @@
 class TrabalhadorPorHora : public Trabalhador {
 	private:
 		float valorHora;
-		float pagSemanal;
 
 	public:
-		TrabalhadorPorHora();
-		void setSalario(float valorHora);
-		float getSalario();
+		TrabalhadorPorHora(std::string nome, float valorHora);
 		float calcularPagamentoSemanal(int horasSemanais);
 
 };

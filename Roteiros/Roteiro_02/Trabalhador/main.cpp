@@ -11,7 +11,8 @@ using namespace std;
 int main() {
     int N;
     int tipo;
-    Trabalhador *trabalhadores;
+    TrabalhadorPorHora *trabalhadoresH;
+    TrabalhadorAssalariado *trabalhadoresA;
 
     cin >> N;
     getchar();
@@ -25,53 +26,29 @@ int main() {
 
         cin >> tipo;
         getchar();
+        getline(cin, nome);
 
         if(tipo == 1) {
-            trabalhadores = new TrabalhadorAssalariado;
-
-            getline(cin, nome);
             cin >> salario;
-            getchar();
 
-            trabalhadores->setNome(nome);
-            trabalhadores->setSalario(salario);
+            trabalhadoresA = new TrabalhadorAssalariado(nome, salario);
 
-            cout << trabalhadores->getNome() << " - " <<
-            "Semanal: R$ " << trabalhadores->calcularPagamentoSemanal() << " - " << 
-            "Mensal: R$ " << trabalhadores->getSalario() << endl;
+            cout << trabalhadoresA->getNome() << " - " <<
+            "Semanal: R$ " << trabalhadoresA->calcularPagamentoSemanal() << " - " << 
+            "Mensal: R$ " << trabalhadoresA->getSalario() << endl;
+            delete trabalhadoresH;
         }
 
         if(tipo == 2) {
-            trabalhadores = new TrabalhadorPorHora;
-
-            getline(cin, nome);
             cin >> valorHora;
             cin >> horasSemanais;
-            getchar();
 
-            trabalhadores->setNome(nome);
-            trabalhadores->setSalario(valorHora);
+            trabalhadoresH = new TrabalhadorPorHora(nome, valorHora);
 
-            cout << trabalhadores->getNome() << " - " <<
-            "Semanal: R$ " << trabalhadores->calcularPagamentoSemanal(horasSemanais) << " - " << 
-            "Mensal: R$ " << trabalhadores->getSalario() << endl;
+            cout << trabalhadoresH->getNome() << " - " <<
+            "Semanal: R$ " << trabalhadoresH->calcularPagamentoSemanal(horasSemanais) << " - " << 
+            "Mensal: R$ " << trabalhadoresH->getSalario() << endl;
+            delete trabalhadoresH;
         }
-
-        /*
-        Preciso resolver:
-
-        1- Problema no getSalario de TrabalhadorPorHora
-
-        Preciso melhorar:
-
-        1- Saída para utilizar melhor as ferramentas do polimorfismo
-
-        Dica:
-
-        >> Olhar resolução do professor para ter uma idéia de qual é a melhor maneira de resolver
-
-        */
-
-        delete trabalhadores;
     }
 }

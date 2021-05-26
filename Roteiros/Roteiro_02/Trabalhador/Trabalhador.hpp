@@ -10,12 +10,12 @@ class Trabalhador  {
 	public:
 
 		Trabalhador();
+
 		std::string getNome();
+		float getSalario();
+
 		void setNome(std::string nome);
-		virtual void setSalario(float salario);
-		virtual float getSalario();
-		virtual float calcularPagamentoSemanal();
-		virtual float calcularPagamentoSemanal(int);
+		void setSalario(float salario);
 
 };
 #endif

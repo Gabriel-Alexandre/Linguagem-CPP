@@ -6,9 +6,8 @@ class TrabalhadorAssalariado : public Trabalhador {
 	private:
 
 	public:
-		TrabalhadorAssalariado();
-		void setSalario(float salario);
-		float getSalario();
+		TrabalhadorAssalariado(std::string nome, float salario);
 		float calcularPagamentoSemanal();
+		
 };
 #endif
