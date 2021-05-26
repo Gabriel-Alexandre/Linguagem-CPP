@@ -8,6 +8,7 @@ class TrabalhadorPorHora : public Trabalhador {
 
 	public:
 		TrabalhadorPorHora(std::string nome, float valorHora);
+		TrabalhadorPorHora();
 		float calcularPagamentoSemanal(int horasSemanais);
 
 };

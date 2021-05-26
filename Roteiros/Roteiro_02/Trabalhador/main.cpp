@@ -11,8 +11,8 @@ using namespace std;
 int main() {
     int N;
     int tipo;
-    TrabalhadorPorHora *trabalhadoresH;
-    TrabalhadorAssalariado *trabalhadoresA;
+    TrabalhadorPorHora trabalhadoresH;
+    TrabalhadorAssalariado trabalhadoresA;
 
     cin >> N;
     getchar();
@@ -31,24 +31,22 @@ int main() {
         if(tipo == 1) {
             cin >> salario;
 
-            trabalhadoresA = new TrabalhadorAssalariado(nome, salario);
+            trabalhadoresA = TrabalhadorAssalariado(nome, salario);
 
-            cout << trabalhadoresA->getNome() << " - " <<
-            "Semanal: R$ " << trabalhadoresA->calcularPagamentoSemanal() << " - " << 
-            "Mensal: R$ " << trabalhadoresA->getSalario() << endl;
-            delete trabalhadoresH;
+            cout << trabalhadoresA.getNome() << " - " <<
+            "Semanal: R$ " << trabalhadoresA.calcularPagamentoSemanal() << " - " << 
+            "Mensal: R$ " << trabalhadoresA.getSalario() << endl;
         }
 
         if(tipo == 2) {
             cin >> valorHora;
             cin >> horasSemanais;
 
-            trabalhadoresH = new TrabalhadorPorHora(nome, valorHora);
+            trabalhadoresH = TrabalhadorPorHora(nome, valorHora);
 
-            cout << trabalhadoresH->getNome() << " - " <<
-            "Semanal: R$ " << trabalhadoresH->calcularPagamentoSemanal(horasSemanais) << " - " << 
-            "Mensal: R$ " << trabalhadoresH->getSalario() << endl;
-            delete trabalhadoresH;
+            cout << trabalhadoresH.getNome() << " - " <<
+            "Semanal: R$ " << trabalhadoresH.calcularPagamentoSemanal(horasSemanais) << " - " << 
+            "Mensal: R$ " << trabalhadoresH.getSalario() << endl;
         }
     }
 }

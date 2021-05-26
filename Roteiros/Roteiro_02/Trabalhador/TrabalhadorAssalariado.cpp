@@ -1,5 +1,9 @@
 #include "TrabalhadorAssalariado.hpp"  
 
+TrabalhadorAssalariado::TrabalhadorAssalariado() {
+
+}
+
 TrabalhadorAssalariado::TrabalhadorAssalariado(std::string nome, float salario) {
 	this->salario = salario;
     this->nome = nome;
