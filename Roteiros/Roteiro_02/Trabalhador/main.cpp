@@ -16,7 +16,7 @@ int main() {
     cin >> N;
     getchar();
 
-    for(int i; i < N; i++) {
+    for(int i = 0; i < N; i++) {
 
         string nome;
         float salario;
@@ -50,7 +50,7 @@ int main() {
             getchar();
 
             trabalhadores->setNome(nome);
-            TrabalhadorPorHora(valorHora);
+            trabalhadores->setSalario(valorHora);
 
             cout << trabalhadores->getNome() << " - " <<
             "Semanal: R$ " << trabalhadores->calcularPagamentoSemanal(horasSemanais) << " - " << 
@@ -60,8 +60,7 @@ int main() {
         /*
         Preciso resolver:
 
-        1- Está perguntando mais vezes que o indicado
-        2- Não está mostrando os valores corretos para trabalhadores por hora
+        1- Problema no getSalario de TrabalhadorPorHora
 
         Preciso melhorar:
 

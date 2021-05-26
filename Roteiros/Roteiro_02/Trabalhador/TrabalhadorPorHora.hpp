@@ -5,10 +5,12 @@
 class TrabalhadorPorHora : public Trabalhador {
 	private:
 		float valorHora;
+		float pagSemanal;
 
 	public:
 		TrabalhadorPorHora();
-		TrabalhadorPorHora(float valorHora);
+		void setSalario(float valorHora);
+		float getSalario();
 		float calcularPagamentoSemanal(int horasSemanais);
 
 };

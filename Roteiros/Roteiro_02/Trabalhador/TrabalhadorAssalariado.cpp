@@ -4,8 +4,12 @@ TrabalhadorAssalariado::TrabalhadorAssalariado() {
 	
 }
 
-TrabalhadorAssalariado::TrabalhadorAssalariado(float salario) {
-	this->salario = salario;
+void TrabalhadorAssalariado::setSalario(float salario) {
+    this->salario = salario;
+}
+
+float TrabalhadorAssalariado::getSalario() {
+    return salario;
 }
 
 float TrabalhadorAssalariado::calcularPagamentoSemanal() {

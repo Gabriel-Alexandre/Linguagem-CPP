@@ -7,7 +7,8 @@ class TrabalhadorAssalariado : public Trabalhador {
 
 	public:
 		TrabalhadorAssalariado();
-		TrabalhadorAssalariado(float salario);
+		void setSalario(float salario);
+		float getSalario();
 		float calcularPagamentoSemanal();
 };
 #endif

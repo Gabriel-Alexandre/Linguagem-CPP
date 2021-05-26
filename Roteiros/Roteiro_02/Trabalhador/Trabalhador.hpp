@@ -11,9 +11,9 @@ class Trabalhador  {
 
 		Trabalhador();
 		std::string getNome();
-		float getSalario();
 		void setNome(std::string nome);
-		void setSalario(float salario);
+		virtual void setSalario(float salario);
+		virtual float getSalario();
 		virtual float calcularPagamentoSemanal();
 		virtual float calcularPagamentoSemanal(int);
 
