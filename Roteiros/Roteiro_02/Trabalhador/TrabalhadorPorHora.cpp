@@ -15,9 +15,11 @@ float TrabalhadorPorHora::calcularPagamentoSemanal(int horasSemanais) {
     if (horasSemanais <= 40) {
         pagSemanal = horasSemanais * valorHora;
     }else{
-        pagSemanal = (40 * horasSemanais) + (horasSemanais - 40) * valorHora * 1.5;
+        pagSemanal = (40 * valorHora) + ((horasSemanais - 40) * (valorHora * 1.5));
     }
 
+    /*O código está correto, só não estou conseguindo compilar porque estou com problema no compilador nessa pasta.
+    */
     salario = pagSemanal * 4;
 
     return pagSemanal;
