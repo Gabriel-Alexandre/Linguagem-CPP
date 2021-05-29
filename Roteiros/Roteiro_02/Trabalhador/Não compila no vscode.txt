@@ -1,0 +1,1 @@
+>> Para funcionar melhor é só compilar no terminal do linux. (Na pasta de fora msm).
