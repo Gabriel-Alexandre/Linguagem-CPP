@@ -9,7 +9,7 @@ class Casa : public Imovel  {
 
 	public:
 
-		Casa(std::string nome, std::string disponibilidade, float valor, int pavimentos, int quartos, float areaTerreno, float areaConstruida);
+		Casa(std::string nome);
 		int getPavimentos();
 		int getQuartos();
 		float getAreaTerreno();

@@ -1,9 +1,7 @@
 #include "Imovel.hpp"  
 	
-Imovel::Imovel(std::string nome, std::string disponibilidade, float valor) {
+Imovel::Imovel(std::string nome) {
 	this->nome = nome;
-	this->disponibilidade = disponibilidade;
-	this->valor = valor;
 }
 
 std::string Imovel::getNome() {
@@ -19,22 +17,6 @@ float Imovel::getValor() {
 }
 
 void Imovel::lerAtributos() {
-    int nomeI;
-
-	switch (nomeI) {
-	case 1:
-		this->nome = "Casa";
-		break;
-	case 2:
-		this->nome = "Apartamento";
-		break;
-	case 3:
-		this->nome = "Terreno";
-		break;
-	default:
-		break;
-	}
-
 	cin >> valor;
 	getchar();
 	getline(cin, disponibilidade);

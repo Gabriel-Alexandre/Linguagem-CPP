@@ -1,7 +1,7 @@
 #include "Terreno.hpp"  
 	
-Terreno::Terreno(std::string nome, std::string disponibilidade, float valor, float area) : Imovel(nome, disponibilidade, valor) {
-	this->area = area;
+Terreno::Terreno(std::string nome) : Imovel(nome) {
+	
 }
 
 float Terreno::getArea() {

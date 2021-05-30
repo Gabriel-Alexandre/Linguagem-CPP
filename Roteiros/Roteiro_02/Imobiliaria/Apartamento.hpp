@@ -9,7 +9,7 @@ class Apartamento : public Imovel {
 
 	public:
 
-		Apartamento(std::string nome, std::string disponibilidade, float valor, int quartos, int andar, int garagem, float area, float condominio);
+		Apartamento(std::string nome);
 		int getQuartos();
 		int getAndar();
 		int getGaragem();

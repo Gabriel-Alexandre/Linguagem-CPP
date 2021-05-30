@@ -12,7 +12,7 @@ class Imovel  {
 
 	public:
 
-		Imovel(std::string nome, std::string disponibilidade, float valor);
+		Imovel(std::string nome);
 		std::string getNome();
 		std::string getDisponibilidade();
 		float getValor();

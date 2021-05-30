@@ -1,11 +1,7 @@
 #include "Apartamento.hpp"  
 	
-Apartamento::Apartamento(std::string nome, std::string disponibilidade, float valor, int quartos, int andar, int garagem, float area, float condominio) : Imovel(nome, disponibilidade, valor) {
-    this->quartos = quartos;
-    this->andar = andar;
-    this->garagem = garagem;
-    this->area = area;
-    this->condominio = condominio;
+Apartamento::Apartamento(std::string nome) : Imovel(nome) {
+    
 }
 int Apartamento::getQuartos() {
     return quartos;

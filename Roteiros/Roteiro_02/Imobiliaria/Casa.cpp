@@ -1,10 +1,7 @@
 #include "Casa.hpp"  
 	
-Casa::Casa(std::string nome, std::string disponibilidade, float valor, int pavimentos, int quartos, float areaTerreno, float areaConstruida) : Imovel(nome, disponibilidade, valor) {
-    this->pavimentos = pavimentos;
-    this->quartos = quartos;
-    this->areaTerreno = areaTerreno;
-    this->areaConstruida = areaConstruida;
+Casa::Casa(std::string nome) : Imovel(nome){   
+    
 }
 
 int Casa::getPavimentos() {

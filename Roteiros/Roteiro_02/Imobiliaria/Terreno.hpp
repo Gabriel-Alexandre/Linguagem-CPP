@@ -8,7 +8,7 @@ class Terreno : public Imovel {
 
 	public:
 
-		Terreno(std::string nome, std::string disponibilidade, float valor, float area);
+		Terreno(std::string nome);
 		float getArea();
 		void lerAtributos();
 		void exibeAtributos();
