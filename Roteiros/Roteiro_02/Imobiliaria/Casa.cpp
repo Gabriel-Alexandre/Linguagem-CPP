@@ -4,22 +4,6 @@ Casa::Casa(std::string nome) : Imovel(nome){
     
 }
 
-int Casa::getPavimentos() {
-    return pavimentos; 
-}
-
-int Casa::getQuartos() {
-    return quartos;
-}
-
-float Casa::getAreaTerreno() {
-    return areaTerreno;
-}
-
-float Casa::getAreaConstruida() {
-    return areaConstruida;
-}
-
 void Casa::lerAtributos() {
     Imovel::lerAtributos();
     cin >> pavimentos;

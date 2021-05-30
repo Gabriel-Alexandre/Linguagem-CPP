@@ -3,25 +3,6 @@
 Apartamento::Apartamento(std::string nome) : Imovel(nome) {
     
 }
-int Apartamento::getQuartos() {
-    return quartos;
-}
-
-int Apartamento::getAndar() {
-    return andar;
-}
-
-int Apartamento::getGaragem() {
-    return garagem;
-}
-
-float Apartamento::getArea() {
-    return area;
-}
-
-float Apartamento::getCondominio() {
-    return condominio;
-}
 
 void Apartamento::lerAtributos() {
     Imovel::lerAtributos();

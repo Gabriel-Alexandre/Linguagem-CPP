@@ -10,10 +10,6 @@ class Casa : public Imovel  {
 	public:
 
 		Casa(std::string nome);
-		int getPavimentos();
-		int getQuartos();
-		float getAreaTerreno();
-		float getAreaConstruida();
 		void lerAtributos();
 		void exibeAtributos();
 

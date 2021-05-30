@@ -37,10 +37,5 @@ int main () {
         }
     }
 
-    //Preciso mudar um pouco a implementação do nome para dar certo
-    //Estudar como fazer a implementação do main
-    /*Na função principal leia N imóveis. Leia o valor de N, em seguida, leia o tipo e instancie o imóvel correspondente ao tipo (declare um objeto para cada possível tipo). Logo após, chame o método lerAtributos() para ler os atributos específicos do imóvel em questão, e exiba a seus atributos de acordo com a saída esperada.
-    */
-
     return 0;
 }

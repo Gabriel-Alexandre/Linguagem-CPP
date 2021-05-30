@@ -9,7 +9,6 @@ class Terreno : public Imovel {
 	public:
 
 		Terreno(std::string nome);
-		float getArea();
 		void lerAtributos();
 		void exibeAtributos();
 

@@ -10,11 +10,6 @@ class Apartamento : public Imovel {
 	public:
 
 		Apartamento(std::string nome);
-		int getQuartos();
-		int getAndar();
-		int getGaragem();
-		float getArea();
-		float getCondominio();
 		void lerAtributos();
 		void exibeAtributos();
 

@@ -13,9 +13,6 @@ class Imovel  {
 	public:
 
 		Imovel(std::string nome);
-		std::string getNome();
-		std::string getDisponibilidade();
-		float getValor();
 		void lerAtributos();
 		void exibeAtributos();
 

@@ -4,10 +4,6 @@ Terreno::Terreno(std::string nome) : Imovel(nome) {
 	
 }
 
-float Terreno::getArea() {
-	return area;
-}
-
 void Terreno::lerAtributos() {
 	Imovel::lerAtributos();
 	cin >> area;
