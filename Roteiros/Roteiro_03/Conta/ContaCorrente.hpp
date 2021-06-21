@@ -14,7 +14,6 @@ class ContaCorrente : public Conta {
 		ContaCorrente(std::string, int, double);
 		double getSalario();
 		double definirLimite();
-		std::string getSaldo();
 
 };
 #endif

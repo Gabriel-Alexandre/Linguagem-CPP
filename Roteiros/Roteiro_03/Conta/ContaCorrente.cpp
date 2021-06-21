@@ -11,23 +11,3 @@ double ContaCorrente::getSalario() {
 double ContaCorrente::definirLimite() {
     return 2 * salario;
 }
-
-std::string ContaCorrente::getSaldo() {
-
-    double soma = saldo + limite;
-    if (soma > 0) {
-        std::string saldo;
-
-        saldo = ',' + '\n' + 'saldo insuficiente' + '\n' +
-        'saldo total disponível: ' + soma + '\n';
-
-        return saldo;
-    }else{
-
-        std::string saldo;
-        
-        saldo = ', saldo total disponível: R$ ' + soma + '\n';
-
-        return saldo;
-    }
-}

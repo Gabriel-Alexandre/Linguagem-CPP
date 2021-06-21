@@ -14,22 +14,3 @@ double Poupanca::reder() {
 
 	return saldo + (saldo * taxaRendimento);
 }
-
-std::string Poupanca::getSaldo() {
-
-    if (saldo > 0) {
-        std::string soldo;
-
-        soldo = ',' + '\n' + 'saldo insuficiente' + '\n' +
-        'saldo total disponível: ' + saldo + '\n';
-
-        return soldo;
-    }else{
-
-        std::string soldo;
-        
-        soldo = ', saldo total disponível: R$ ' + saldo + '\n';
-
-        return soldo;
-    }
-}

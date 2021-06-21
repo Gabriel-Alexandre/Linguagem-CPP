@@ -18,52 +18,81 @@ int main () {
     for(int i = 0; i < 3; i++) {
         getline(cin, nomeCliente);
         cin >> numeroConta;
-        cin >> salario;
-        cin >> depositar;
-        cin >> sacar;
 
         switch (i)
         {
         case 0:
+
+            cin >> salario;
+            cin >> depositar;
+            cin >> sacar;
+            getchar();
+
             conta = new ContaCorrente(nomeCliente, numeroConta, salario);
 
             conta->depositar(depositar);
             conta->sacar(sacar);
+            conta->definirLimite();
 
-            cout << conta->getNomeCliente() << ", cc: " <<
-            conta->getNumeroConta() << ", salário " <<
-            conta->getSalario() << conta->getSaldo() << endl;
+            if(sacar > (depositar + conta->definirLimite())) {
+                cout << conta->getNomeCliente() << ", cc: " <<
+                conta->getNumeroConta() << ", salário " <<
+                conta->getSalario() << ", saldo total disponível: R$ " <<
+                conta->getSaldo() << endl;
+            }else{
+                cout << conta->getNomeCliente() << ", cc: " <<
+                conta->getNumeroConta() << ", salário " <<
+                conta->getSalario() << ",\n" << "saldo insuficiente\n" <<
+                "saldo total disponível: R$ " << depositar + conta->definirLimite() << endl;
+            }
 
             break;
         case 1:
+
+            cin >> salario;
+            cin >> depositar;
+            cin >> sacar;
+            getchar();
+
             contaEspecial = new ContaEspecial(nomeCliente, numeroConta, salario);
 
             contaEspecial->depositar(depositar);
             contaEspecial->sacar(sacar);
+            contaEspecial->definirLimite();
 
-            cout << contaEspecial->getNomeCliente() << ", cc: " <<
-            contaEspecial->getNumeroConta() << ", salário " <<
-            contaEspecial->getSalario() << contaEspecial->getSaldo() << endl;
+            if(sacar > (depositar + conta->definirLimite())) {
+                cout << contaEspecial->getNomeCliente() << ", cc: " <<
+                contaEspecial->getNumeroConta() << ", salário " <<
+                contaEspecial->getSalario() << ", saldo total disponível: R$ " <<
+                contaEspecial->getSaldo() << endl;
+            }else{
+                cout << contaEspecial->getNomeCliente() << ", cc: " <<
+                contaEspecial->getNumeroConta() << ", salário " <<
+                contaEspecial->getSalario() << ",\n" << "saldo insuficiente\n" <<
+                "saldo total disponível: R$ " << depositar + contaEspecial->definirLimite() << endl;
+            }
 
             break;
 
         case 2:
+
+            cin >> depositar;
+            cin >> sacar;
+            getchar();
+
             poupanca = new Poupanca(nomeCliente, numeroConta);
 
             poupanca->depositar(depositar);
             poupanca->sacar(sacar);
 
             cout << poupanca->getNomeCliente() << ", cc: " <<
-            poupanca->getNumeroConta() << ", saldo total disponível: R$ " << poupanca->getSaldo() << endl;
+            poupanca->getNumeroConta() << ", saldo total disponível: R$ " << poupanca->reder() << endl;
 
             break;
         
         default:
             break;
         }
-
-        delete conta;
-        delete contaEspecial;
     }
 }
 

@@ -10,6 +10,5 @@ class ContaEspecial : public ContaCorrente {
 
 		ContaEspecial(std::string, int, double);
 		double definirLimite();
-		std::string getSaldo();
 };
 #endif
