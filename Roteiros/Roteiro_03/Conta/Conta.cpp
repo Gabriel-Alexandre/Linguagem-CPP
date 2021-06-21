@@ -3,6 +3,7 @@
 Conta::Conta(std::string nomeCliente, int numeroConta) {
 	this->nomeCliente = nomeCliente;
     this->numeroConta = numeroConta;
+    this->saldo = 0;
 }
 
 std::string Conta::getNomeCliente() {
@@ -18,7 +19,9 @@ double Conta::getSaldo() {
 }
 
 void Conta::sacar(double valor) {
-    saldo = saldo - valor;
+    if(saldo > 0){
+        saldo = saldo - valor;
+    }
 }
 
 void Conta::depositar(double valor) {

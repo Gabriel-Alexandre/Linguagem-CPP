@@ -34,11 +34,11 @@ int main () {
             conta->sacar(sacar);
             conta->definirLimite();
 
-            if(sacar > (depositar + conta->definirLimite())) {
+            if(sacar < (depositar + conta->definirLimite())) {
                 cout << conta->getNomeCliente() << ", cc: " <<
                 conta->getNumeroConta() << ", salário " <<
                 conta->getSalario() << ", saldo total disponível: R$ " <<
-                conta->getSaldo() << endl;
+                conta->getSaldo() + conta->definirLimite() << endl;
             }else{
                 cout << conta->getNomeCliente() << ", cc: " <<
                 conta->getNumeroConta() << ", salário " <<
@@ -60,7 +60,7 @@ int main () {
             contaEspecial->sacar(sacar);
             contaEspecial->definirLimite();
 
-            if(sacar > (depositar + conta->definirLimite())) {
+            if(sacar < (depositar + conta->definirLimite())) {
                 cout << contaEspecial->getNomeCliente() << ", cc: " <<
                 contaEspecial->getNumeroConta() << ", salário " <<
                 contaEspecial->getSalario() << ", saldo total disponível: R$ " <<
