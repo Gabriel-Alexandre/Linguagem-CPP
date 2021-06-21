@@ -95,15 +95,3 @@ int main () {
         }
     }
 }
-
-/*
->> Obs: O que falta
-
--> Implementar lógica das classes
--> Implementar lógica do saldo total
-
->> Dica:
-
--> Implementar e verificar classe por classe
-
-*/
