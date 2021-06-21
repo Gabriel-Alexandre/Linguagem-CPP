@@ -8,7 +8,8 @@
 using namespace std;
 
 int main () {
-    Conta *conta;
+    Poupanca *poupanca;
+    ContaCorrente *conta;
     ContaEspecial *contaEspecial;
     string nomeCliente;
     int numeroConta;
@@ -47,14 +48,13 @@ int main () {
             break;
 
         case 2:
-            conta = new Poupanca(nomeCliente, numeroConta);
+            poupanca = new Poupanca(nomeCliente, numeroConta);
 
-            conta->depositar(depositar);
-            conta->sacar(sacar);
+            poupanca->depositar(depositar);
+            poupanca->sacar(sacar);
 
-            cout << conta->getNomeCliente() << ", cc: " <<
-            conta->getNumeroConta() << ", salário " <<
-            conta->getSalario() << ", saldo total disponível: R$ " << conta->getSaldo() << endl;
+            cout << poupanca->getNomeCliente() << ", cc: " <<
+            poupanca->getNumeroConta() << ", saldo total disponível: R$ " << poupanca->getSaldo() << endl;
 
             break;
         

@@ -2,7 +2,7 @@
 #define POUPANCA_H
 #include "Conta.hpp"
 	
-class Poupanca : public Conta{
+class Poupanca : public Conta {
 	private:
 
 		int variacao;
