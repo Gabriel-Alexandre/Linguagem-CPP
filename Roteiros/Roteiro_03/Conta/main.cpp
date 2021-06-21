@@ -32,7 +32,7 @@ int main () {
 
             cout << conta->getNomeCliente() << ", cc: " <<
             conta->getNumeroConta() << ", salário " <<
-            conta->getSalario() << ", saldo total disponível: R$ " << conta->getSaldo() << endl;
+            conta->getSalario() << conta->getSaldo() << endl;
 
             break;
         case 1:
@@ -43,7 +43,7 @@ int main () {
 
             cout << contaEspecial->getNomeCliente() << ", cc: " <<
             contaEspecial->getNumeroConta() << ", salário " <<
-            contaEspecial->getSalario() << ", saldo total disponível: R$ " << contaEspecial->getSaldo() << endl;
+            contaEspecial->getSalario() << contaEspecial->getSaldo() << endl;
 
             break;
 

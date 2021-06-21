@@ -1,6 +1,7 @@
 #ifndef CONTAESPECIAL_H
 #define CONTAESPECIAL_H
 #include "ContaCorrente.hpp"
+#include <string>
 	
 class ContaEspecial : public ContaCorrente {
 	private:
@@ -9,5 +10,6 @@ class ContaEspecial : public ContaCorrente {
 
 		ContaEspecial(std::string, int, double);
 		double definirLimite();
+		std::string getSaldo();
 };
 #endif

@@ -14,7 +14,7 @@ class Conta {
 		Conta(std::string, int);
 		std::string getNomeCliente();
 		int getNumeroConta();
-		double getSaldo();
+		std::string getSaldo();
 		void sacar(double);
 		void depositar(double);
 		

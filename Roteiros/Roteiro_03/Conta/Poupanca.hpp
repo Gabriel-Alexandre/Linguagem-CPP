@@ -12,6 +12,7 @@ class Poupanca : public Conta {
 
 		Poupanca(std::string, int);
 		double reder();
+		std::string getSaldo();
 		
 
 };

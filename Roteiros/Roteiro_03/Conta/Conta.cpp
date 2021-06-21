@@ -13,8 +13,8 @@ int Conta::getNumeroConta() {
     return numeroConta;
 }
 
-double Conta::getSaldo() {
-    return saldo;
+std::string Conta::getSaldo() {
+    
 }
 
 void Conta::sacar(double valor) {
