@@ -9,9 +9,27 @@ void SistemaGerenciaFolha::setFuncionarios(Funcionario *funcionario) {
 }
 
 double SistemaGerenciaFolha::calculaValorTotalFolha() {
-    return 0;
+    double soma;
+
+    // for (int i = 0; i < funcionarios.size(); i++) {
+    //     soma += funcionarios[i]->calculaSalario();
+    // }
+
+    //foreach
+    for (Funcionario *f : funcionarios) {
+        soma += f->calculaSalario();
+    }
+
+    return soma;
 }
 
-double SistemaGerenciaFolha::consultaSalarioFuncionario() {
-    return 0;
+double SistemaGerenciaFolha::consultaSalarioFuncionario(std::string nome) {
+    
+    for (Funcionario *f : funcionarios) {
+        if(f->getNome().find(nome) != std::string::npos) {
+            return f->calculaSalario();
+        }
+    }
+    
+    return -1;
 }

@@ -1,6 +1,7 @@
 #ifndef SISTEMAGERENCIAFOLHA_H
 #define SISTEMAGERENCIAFOLHA_H
 #include <vector>
+#include <string>
 #include "Funcionario.hpp"
 
 using namespace std;
@@ -14,7 +15,7 @@ class SistemaGerenciaFolha  {
 		SistemaGerenciaFolha();
 		void setFuncionarios(Funcionario *);
 		double calculaValorTotalFolha();
-		double consultaSalarioFuncionario();
+		double consultaSalarioFuncionario(std::string);
 
 };
 #endif
