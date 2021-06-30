@@ -7,7 +7,7 @@ class OrcamentoEstouradoException : public std::exception {
 
 	public:
 
-		OrcamentoEstouradoException();
+		OrcamentoEstouradoException(double);
 
 };
 #endif

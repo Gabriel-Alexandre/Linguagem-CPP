@@ -1,24 +1,24 @@
 #include "Comissionado.hpp"  
 	
 Comissionado::Comissionado() {
-	vendasSemanais = 0;
+	vendasMensal = 0;
     percentualComissao = 0;
 }
 	
 double Comissionado::calculaSalario() {
-    return 0;
+    return vendasMensal * percentualComissao;
 }
 
-double Comissionado::getVendasSemanais() {
-    return vendasSemanais;
+double Comissionado::getVendasMensal() {
+    return vendasMensal;
 }
 
 double Comissionado::getPercentualComissao() {
     return percentualComissao;
 }
 
-void Comissionado::setVendasSemanais(double vendasSemanais) {
-    this->vendasSemanais = vendasSemanais;
+void Comissionado::setVendasMensal(double vendasMensal) {
+    this->vendasMensal = vendasMensal;
 }
 
 void Comissionado::setPercentualComissao(double percentualComissao) {

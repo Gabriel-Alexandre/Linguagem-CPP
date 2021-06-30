@@ -1,6 +1,9 @@
-#include "FuncionarioNaoExisteException.hpp"  
+#include "FuncionarioNaoExisteException.hpp" 
+#include <iostream>
+
+using namespace std;
 	
-FuncionarioNaoExisteException::FuncionarioNaoExisteException() {
-	
+FuncionarioNaoExisteException::FuncionarioNaoExisteException(std::string nome) {
+	cout << "FuncionarioNaoExisteException " << nome << endl;
 }
 	

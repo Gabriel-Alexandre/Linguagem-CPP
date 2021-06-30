@@ -4,16 +4,16 @@
 	
 class Comissionado : public Funcionario{
 	private:
-		double vendasSemanais;
+		double vendasMensal;
 		double percentualComissao;
 
 	public:
 
 		Comissionado();
 		double calculaSalario();
-		double getVendasSemanais();
+		double getVendasMensal();
 		double getPercentualComissao();
-		void setVendasSemanais(double);
+		void setVendasMensal(double);
 		void setPercentualComissao(double);
 		
 };

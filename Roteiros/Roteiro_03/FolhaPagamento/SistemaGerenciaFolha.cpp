@@ -1,7 +1,9 @@
-#include "SistemaGerenciaFolha.hpp"  
+#include "SistemaGerenciaFolha.hpp"
+#include "FuncionarioNaoExisteException.hpp"  
+#include "OrcamentoEstouradoException.hpp"
 	
-SistemaGerenciaFolha::SistemaGerenciaFolha() {
-	
+SistemaGerenciaFolha::SistemaGerenciaFolha(double orcamentoMax) {
+	this->orcamentoMax = orcamentoMax;
 }
 	
 void SistemaGerenciaFolha::setFuncionarios(Funcionario *funcionario) {
@@ -20,6 +22,10 @@ double SistemaGerenciaFolha::calculaValorTotalFolha() {
         soma += f->calculaSalario();
     }
 
+    if (soma > orcamentoMax) {
+        throw OrcamentoEstouradoException(soma);
+    }
+
     return soma;
 }
 
@@ -30,6 +36,6 @@ double SistemaGerenciaFolha::consultaSalarioFuncionario(std::string nome) {
             return f->calculaSalario();
         }
     }
-    
-    return -1;
+
+    throw FuncionarioNaoExisteException(nome);
 }

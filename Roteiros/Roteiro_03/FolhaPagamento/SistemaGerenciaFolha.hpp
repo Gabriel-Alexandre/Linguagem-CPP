@@ -9,10 +9,11 @@ using namespace std;
 class SistemaGerenciaFolha  {
 	private:
 		vector<Funcionario*> funcionarios;
+		double orcamentoMax;
 
 	public:
 
-		SistemaGerenciaFolha();
+		SistemaGerenciaFolha(double);
 		void setFuncionarios(Funcionario *);
 		double calculaValorTotalFolha();
 		double consultaSalarioFuncionario(std::string);

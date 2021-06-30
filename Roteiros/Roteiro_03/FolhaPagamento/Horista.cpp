@@ -6,19 +6,14 @@ Horista::Horista() {
 }
 	
 double Horista::calculaSalario() {
+    double salarioSemanal = salarioPorHora * horasTrabalhadas;
 
-    // if (horasTrabalhadas <= 40){
-    //     return salarioPorHora * horasTrabalhadas;
-    // }else{
-    //     double extra, soma, soma2;
-        
-    //     extra = salarioPorHora * 1.5;
-    //     soma = salarioPorHora * 40;
-    //     soma2 = extra * (horasTrabalhadas - 40);
+    if (horasTrabalhadas > 40) {
+        salarioSemanal = salarioPorHora * 40 + 
+        (horasTrabalhadas - 40) * 1.5 * salarioPorHora;
+    }
 
-    //     return soma + soma2; 
-    // }
-    return 0;
+    return salarioSemanal * 4;
 }
 
 double Horista::getSalarioPorHora() {
