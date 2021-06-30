@@ -1,6 +1,7 @@
 #ifndef HORISTA_H
 #define HORISTA_H
 #include "Funcionario.hpp"
+#include <string>
 	
 class Horista : public Funcionario {
 	private:
@@ -10,12 +11,8 @@ class Horista : public Funcionario {
 
 	public:
 
-		Horista();
+		Horista(std::string nome, int matricula, double salarioPorHora, double horasTrabalhadas);
 		double calculaSalario();
-		double getSalarioPorHora();
-		double getHorasTrabalhadas();
-		void setSalarioPorHora(double);
-		void setHorasTrabalhadas(double);
 
 };
 #endif

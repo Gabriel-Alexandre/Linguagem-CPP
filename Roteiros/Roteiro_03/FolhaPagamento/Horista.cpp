@@ -1,8 +1,10 @@
 #include "Horista.hpp"  
 	
-Horista::Horista() {
-	salarioPorHora = 0;
-    horasTrabalhadas = 0;
+Horista::Horista(std::string nome, int matricula, double salarioPorHora, double horasTrabalhadas) : 
+    Funcionario(nome, matricula)
+{
+	this->salarioPorHora = salarioPorHora;
+    this->horasTrabalhadas = horasTrabalhadas;
 }
 	
 double Horista::calculaSalario() {
@@ -14,20 +16,4 @@ double Horista::calculaSalario() {
     }
 
     return salarioSemanal * 4;
-}
-
-double Horista::getSalarioPorHora() {
-    return salarioPorHora;
-}
-
-double Horista::getHorasTrabalhadas() {
-    return horasTrabalhadas;
-}
-
-void Horista::setSalarioPorHora(double salarioPorHora) {
-    this->salarioPorHora = salarioPorHora;
-}
-
-void Horista::setHorasTrabalhadas(double horasTrabalhadas) {
-    this->horasTrabalhadas = horasTrabalhadas;
 }

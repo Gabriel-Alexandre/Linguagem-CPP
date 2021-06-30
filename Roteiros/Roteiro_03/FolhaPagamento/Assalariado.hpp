@@ -1,6 +1,7 @@
 #ifndef ASSALARIADO_H
 #define ASSALARIADO_H
 #include "Funcionario.hpp"
+#include <string>
 	
 class Assalariado : public Funcionario{
 	private:
@@ -8,10 +9,8 @@ class Assalariado : public Funcionario{
 
 	public:
 
-		Assalariado();
+		Assalariado(std::string nome, int matricula, double salario);
 		double calculaSalario();
-		double getSalario();
-		void setSalario(double);
 
 };
 #endif

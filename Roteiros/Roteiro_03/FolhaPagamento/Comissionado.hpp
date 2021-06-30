@@ -1,6 +1,7 @@
 #ifndef COMISSIONADO_H
 #define COMISSIONADO_H
 #include "Funcionario.hpp"
+#include <string>
 	
 class Comissionado : public Funcionario{
 	private:
@@ -9,12 +10,8 @@ class Comissionado : public Funcionario{
 
 	public:
 
-		Comissionado();
+		Comissionado(std::string nome, int matricula, double vendasMensal, double percentualComissao);
 		double calculaSalario();
-		double getVendasMensal();
-		double getPercentualComissao();
-		void setVendasMensal(double);
-		void setPercentualComissao(double);
 		
 };
 #endif

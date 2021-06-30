@@ -9,11 +9,8 @@ class Funcionario  {
 
 	public:
 
-		Funcionario();
+		Funcionario(std::string nome, int matricula);
 		std::string getNome();
-		int getMatricula();
-		void setNome(std::string);
-		void setMatricula(int);
 		virtual double calculaSalario() = 0;
 
 };
