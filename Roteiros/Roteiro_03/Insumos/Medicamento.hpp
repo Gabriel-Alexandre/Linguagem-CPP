@@ -11,7 +11,7 @@ class Medicamento  : public Insumo
 	public:
 
 		Medicamento(std::string, std::string, std::string, int, int, int, std::string, std::string, std::string);
-		~Medicamento();
+		virtual ~Medicamento();
 
 };
 #endif

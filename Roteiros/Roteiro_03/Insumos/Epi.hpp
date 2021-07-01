@@ -12,7 +12,7 @@ class Epi  : public Insumo
 	public:
 
 		Epi(std::string, std::string, std::string, int, int, int, std::string, int);
-		~Epi();
+		virtual ~Epi();
 
 };
 #endif

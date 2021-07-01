@@ -20,7 +20,7 @@ class Insumo
 	public:
 
 		Insumo(std::string, std::string, std::string, int, int, int);
-		~Insumo();
+		virtual ~Insumo();
 
 };
 #endif

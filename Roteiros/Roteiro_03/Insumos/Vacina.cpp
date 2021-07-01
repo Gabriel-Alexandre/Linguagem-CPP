@@ -1,4 +1,7 @@
-#include "Vacina.hpp"  
+#include "Vacina.hpp" 
+#include <iostream>
+
+using namespace std;
 	
 Vacina::Vacina(std::string nome, std::string dtVencimento, std::string nomeFabricante, int quantidade, 
 int valorUnitario, int tipoInsumo, int tipo, int quantidadeDoses, int intervalo) :
@@ -11,5 +14,5 @@ int valorUnitario, int tipoInsumo, int tipo, int quantidadeDoses, int intervalo)
 	
 Vacina::~Vacina()
 {
-	
+	cout << "Deletando Vacina\n";
 }

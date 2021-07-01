@@ -10,7 +10,7 @@ class Vacina  : public Insumo
 	public:
 
 		Vacina(std::string, std::string, std::string, int, int, int, int, int, int);
-		~Vacina();
+		virtual ~Vacina();
 
 };
 #endif
